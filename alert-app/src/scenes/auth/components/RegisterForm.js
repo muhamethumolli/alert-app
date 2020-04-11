@@ -5,6 +5,7 @@ import Button from "../../../components/base/Button";
 import useForm from "../../../components/hooks/useForm";
 import rules from "../helpers/registerRules";
 import { registerStart } from "../actions/auth-actions";
+import { Error, Success } from "./Templates";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,8 @@ const RegisterForm = () => {
   );
   return (
     <form>
-      {!!error && <p className="error-red-col">{"Wrong"}</p>}
+      {!!error && <Error message={"Something went wrong"} />}
+      {!!data && <Success />}
       <div className="form-group">
         <label className="label" htmlFor="name">
           Name *

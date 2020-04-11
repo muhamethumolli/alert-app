@@ -15,4 +15,19 @@ const RegisterLoginWrapper = ({
   );
 };
 
-export { RegisterLoginWrapper };
+const Success = () => {
+  return (
+    <div class="msg-success">
+      <p class="green-col">Success Register </p>
+    </div>
+  );
+};
+
+const Error = ({ message }) => {
+  return (
+    <div class="msg-error">
+      <p class="red-col">{message} </p>
+    </div>
+  );
+};
+export { RegisterLoginWrapper, Success, Error };

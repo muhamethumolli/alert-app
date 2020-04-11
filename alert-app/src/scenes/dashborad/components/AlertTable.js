@@ -22,6 +22,7 @@ const AlertTable = () => {
           <tfoot></tfoot>
         </table>
         {!!loading && <h1>...</h1>}
+        {!!error && <h1>Something went wrong</h1>}
       </div>
     </div>
   );

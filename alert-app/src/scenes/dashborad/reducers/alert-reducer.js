@@ -7,6 +7,10 @@ export const alert = (state = {}, { payload, type }) => {
       return { data: payload };
     case alertConstants.ALERT_GET_FAILURE:
       return { error: payload };
+    case alertConstants.ALERT_CREATE_SUCCESS:
+      return { data: [...state.data, ...payload] };
+    case alertConstants.ALERT_GET_FAILURE:
+      return { error: payload };
     default:
       return state;
   }

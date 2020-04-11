@@ -20,6 +20,26 @@ export function* getAlert() {
   }
 }
 
+export function* createAlert(payload) {
+  try {
+    const res = yield axios.post(
+      "https://alert-api.ornio.xyz/api/alerts",
+      payload,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+          Authorization: `Bearer ${getUserToken()}`,
+        },
+      }
+    );
+    yield put(alertGetSuccess(res.data));
+  } catch (error) {
+    yield put(alertGetError(error));
+  }
+}
+
 export function* alertWatcher() {
   yield takeLatest(alertConstants.ALERT_GET_REQUEST, getAlert);
+  yield takeLatest(alertConstants.ALERT_CREATE_REQUEST, createAlert);
 }

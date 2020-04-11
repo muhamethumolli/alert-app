@@ -5,7 +5,6 @@ import { createPortal } from "react-dom";
 const portal = document.getElementById("portal");
 const base = document.createElement("div");
 base.classList.add("modal");
-base.classList.add("customized-scroll");
 
 const ModalPortal = ({ children }) => {
   useLayoutEffect(() => {

@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userStart } from "../actions/user-actions";
+import { history } from "../../../helpers";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,12 @@ const Navbar = () => {
             <span className="circle">{splitString()}</span>
           </div>
         )}
-        <div className="add">
+        <div
+          className="add"
+          onClick={(_) => {
+            history.push("/dashboard/add");
+          }}
+        >
           <span className="plus">+</span>
         </div>
       </nav>

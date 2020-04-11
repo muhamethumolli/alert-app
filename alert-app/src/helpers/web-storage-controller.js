@@ -7,7 +7,7 @@ export const setUser = (token) => {
   }
 };
 
-export const getUser = (_) => {
+export const getUserToken = (_) => {
   try {
     const detailsJSON = localStorage.getItem("__uid");
     return JSON.parse(detailsJSON);

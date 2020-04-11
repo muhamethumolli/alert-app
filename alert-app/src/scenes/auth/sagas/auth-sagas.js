@@ -12,11 +12,6 @@ import {
 } from "../actions/auth-actions";
 
 export function* signIn({ payload }) {
-  // {
-  //    "email": "flamur.mavraj@ornio.no",
-  //    "password": "secret"
-  // }
-  console.log(payload);
   try {
     const res = yield axios.post(
       "https://alert-api.ornio.xyz/api/auth/login",

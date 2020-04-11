@@ -1,0 +1,136 @@
+html,
+body {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.register {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.register-img {
+  width: 50%;
+  height: 100%;
+  background-image: url("./assets/login-image-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register-form {
+  width: 50%;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form--heading {
+  font-size: 3rem;
+}
+
+form {
+  width: 100%;
+  margin-top: 3rem;
+  max-width: 40rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #a69f9f;
+}
+
+.input {
+  width: 100%;
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  border: 1px solid #c7c3c3;
+  outline: 0;
+  padding-left: 1.2rem;
+  margin-top: 0.8rem;
+  padding-right: 1rem;
+  -webkit-appearance: none;
+}
+
+.m-t-20 {
+  margin-top: 2rem;
+}
+
+.btn-blue {
+  width: 100%;
+  background-color: #0345fc;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 1.3rem 1rem;
+}
+
+.btn-grey {
+  display: inline-block;
+  width: 100%;
+  background-color: #d1cdcd;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 1.3rem 1rem;
+  max-width: 40rem;
+}
+.line {
+  width: 100%;
+  max-width: 40rem;
+  height: 0.2rem;
+  background-color: #a69f9f;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .register-form {
+    padding: 6rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .register-img {
+    display: none;
+  }
+  .register-form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .register-form {
+    padding: 4rem 2rem;
+  }
+}
